@@ -1,6 +1,6 @@
 # Finding the Way a Home Faces (Simple Guide)
 
-> A friendly explainer of the **GNAF Orientation Pipeline** — in plain language.
+> A friendly explainer of the **GNAF Orientation Pipeline**.
 
 
 
@@ -8,7 +8,7 @@
 
 Every home sits near a road. This little project figures out **which way each home faces toward its nearest road** (for example: North, South‑East, West, etc.). It also **double‑checks its own work** and writes a short report so you can trust the results.
 
-You don’t need to be a programmer to understand the idea — this guide keeps things simple. 🙂
+You don’t need to be a programmer to understand the idea — this guide keeps things simple. 
 
 
 
