@@ -62,20 +62,20 @@ These are plain text files (CSV and TXT), so you can open them with Excel, Googl
 If you like, you can run the script from a terminal:
 
 ```bash
-python miniproject.py \
+python Microburbs_MiniProject.py \
   --gnaf gnaf_prop.parquet \
   --roads roads.gpkg \
   --epsg_metric 7856 \
   --radii 30 60 120 250 500 \
   --results gnaf_orientation.csv \
   --qc gnaf_orientation_validated.csv \
-  --log miniproject_output.txt
+  --log MiniProject_Output.txt
 ```
 
 Don’t worry about the extra options — the defaults work for most cases. You’ll just need the addresses file and the roads file.
 
 > Tip: If your area isn’t in Australia, swap `--epsg_metric` for a local metric map setting (your GIS friend can help).
-
+> Note: The script doesn't create the repository structured directories. This is #TODO.
 
 
 ## A tiny bit of the “how” (no heavy math!)
