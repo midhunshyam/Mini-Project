@@ -69,7 +69,7 @@ cd <path/to/Mini-Project/Scripts>
 cp <path/to/gnaf_prop.parquet> <path/to/Mini-Project/Scripts>
 cp <path/to/roads.gpkg> <path/to/Mini-Project/Scripts>
 
-pip install pandas geopandas pyarrow shapely tqdm
+pip install pandas geopandas pyarrow shapely tqdm # Create venv (optional) 
 
 python Microburbs_MiniProject.py \
   --gnaf gnaf_prop.parquet \
