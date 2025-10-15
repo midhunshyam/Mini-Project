@@ -119,7 +119,7 @@ This avoids guesswork and keeps the results consistent.
 2. The nearest road is found a short distance away.  
 3. Draw a line from the home to that road point — it points **South‑West**.  
 4. The result says the home “faces **SW**,” distance 12.5 m, bearing 238.7°.  
-5. The validation step runs again and confirms the same answer — nice! ✅
+5. The validation step runs again and confirms the same answer ! 
 
 
 
