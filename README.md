@@ -65,7 +65,9 @@ If you like, you can run the script from a terminal:
 
 ```bash
 cd <path/to/Mini-Project/Scripts>
- 
+cp <path/to/gnaf_prop.parquet> <path/to/Mini-Project/Scripts>
+cp <path/to/roads.gpkg> <path/to/Mini-Project/Scripts>
+
 python Microburbs_MiniProject.py \
   --gnaf gnaf_prop.parquet \
   --roads roads.gpkg \
@@ -79,7 +81,7 @@ python Microburbs_MiniProject.py \
 Don’t worry about the extra options — the defaults work for most cases. You’ll just need the addresses file and the roads file.
 
 > Tip: If your area isn’t in Australia, swap `--epsg_metric` for a local metric map setting (your GIS friend can help).
-> Note: The script doesn't create the repository structured directories. This is #TODO.
+> Note: The output is generated in the same directory as the Microburbs_MiniProject.py. #TODO:The script doesn't create the repository structured directories.
 
 
 ## A tiny bit of the “how” (no heavy math!)
