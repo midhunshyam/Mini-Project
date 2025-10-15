@@ -59,9 +59,13 @@ These are plain text files (CSV and TXT), so you can open them with Excel, Googl
 
 ## How do I run it? (Short version)
 
+Clone to this repository and follow the below instructions:
+
 If you like, you can run the script from a terminal:
 
 ```bash
+cd <path/to/Mini-Project/Scripts>
+ 
 python Microburbs_MiniProject.py \
   --gnaf gnaf_prop.parquet \
   --roads roads.gpkg \
