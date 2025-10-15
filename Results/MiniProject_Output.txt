@@ -1,0 +1,77 @@
+2025-10-15 18:20:11,167 [INFO] === GNAF Orientation Pipeline started ===
+2025-10-15 18:20:11,167 [INFO] Arguments: {'gnaf': PosixPath('gnaf_prop.parquet'), 'roads': PosixPath('roads.gpkg'), 'results': PosixPath('gnaf_orientation.csv'), 'qc': PosixPath('gnaf_orientation_validated.csv'), 'log': PosixPath('miniproejct_output.txt'), 'epsg_metric': 7856, 'radii': [30, 60, 120, 250, 500]}
+2025-10-15 18:20:11,167 [INFO] Loading GNAF parquet: gnaf_prop.parquet
+2025-10-15 18:20:11,250 [INFO] GNAF schema:
+gid: int64
+gnaf_pid: string
+street_locality_pid: string
+locality_pid: string
+alias_principal: string
+primary_secondary: string
+building_name: string
+lot_number: string
+flat_number: string
+level_number: string
+number_first: string
+number_last: string
+street_name: string
+street_type: string
+street_suffix: string
+address: string
+locality_name: string
+postcode: string
+state: string
+locality_postcode: string
+confidence: int64
+legal_parcel_id: string
+mb_2016_code: int64
+mb_2021_code: int64
+latitude: double
+longitude: double
+geocode_type: string
+reliability: int64
+geom: string
+schema: string
+__index_level_0__: int64
+-- schema metadata --
+pandas: '{"index_columns": ["__index_level_0__"], "column_indexes": [{"na' + 3970
+2025-10-15 18:20:11,250 [INFO] GNAF rows: 70591 | cols: 31
+2025-10-15 18:20:11,347 [INFO] GNAF head(5):
+ gid       gnaf_pid street_locality_pid    locality_pid alias_principal primary_secondary building_name lot_number flat_number level_number number_first number_last street_name street_type street_suffix            address locality_name postcode state locality_postcode  confidence legal_parcel_id  mb_2016_code  mb_2021_code   latitude  longitude      geocode_type  reliability                                               geom      schema                    geometry
+3115 GANSW705858629          NSW2878308 locc9618e9a6979               P              None          None          1        None         None           10        None    MELNOTTE      AVENUE          None 10 MELNOTTE AVENUE     ROSEVILLE     2069   NSW              2069           2        1/105203   10840311000   10840311000 -33.787478 151.182595 PROPERTY CENTROID            2 0101000020BB100000E599B8D1D7E562406816D312CCE440C0 gnaf_202402  POINT (151.1826 -33.78748)
+3120 GANSW705858630          NSW2878308 locc9618e9a6979               P              None          None         26        None         None           11        None    MELNOTTE      AVENUE          None 11 MELNOTTE AVENUE     ROSEVILLE     2069   NSW              2069           2         26/7045   10840312000   10840312000 -33.787164 151.183209 PROPERTY CENTROID            2 0101000020BB1000008215D0D9DCE562403E3335C7C1E440C0 gnaf_202402 POINT (151.18321 -33.78716)
+3123 GANSW705858631          NSW2878308 locc9618e9a6979               P              None          None         16        None         None           12        None    MELNOTTE      AVENUE          None 12 MELNOTTE AVENUE     ROSEVILLE     2069   NSW              2069           2       15/455712   10840311000   10840311000 -33.787375 151.182549 PROPERTY CENTROID            2 0101000020BB100000E8F3B470D7E562406A31BAB4C8E440C0 gnaf_202402 POINT (151.18255 -33.78738)
+3126 GANSW705858632          NSW2878308 locc9618e9a6979               P              None          None         27        None         None           13        None    MELNOTTE      AVENUE          None 13 MELNOTTE AVENUE     ROSEVILLE     2069   NSW              2069           2         27/7045   10840312000   10840312000 -33.787023 151.183146 PROPERTY CENTROID            2 0101000020BB1000009DEE2354DCE56240D5DAEA28BDE440C0 gnaf_202402 POINT (151.18315 -33.78702)
+3130 GANSW705858633          NSW2878308 locc9618e9a6979               P              None          None          1        None         None           14        None    MELNOTTE      AVENUE          None 14 MELNOTTE AVENUE     ROSEVILLE     2069   NSW              2069           2        1/963791   10840311000   10840311000 -33.787273 151.182502 PROPERTY CENTROID            2 0101000020BB1000005048190ED7E5624024456458C5E440C0 gnaf_202402  POINT (151.1825 -33.78727)
+2025-10-15 18:20:11,353 [INFO] GNAF total bounds [minx,miny,maxx,maxy]: [151.16174945, -33.8162863, 151.23148752, -33.76884754]
+2025-10-15 18:20:11,358 [INFO] Loading Roads GPKG: roads.gpkg
+2025-10-15 18:20:11,451 [INFO] Roads len: 173  |  CRS: EPSG:4326
+2025-10-15 18:20:11,452 [INFO] Roads geometry types: ['LineString']
+2025-10-15 18:20:11,452 [INFO] Roads total bounds [minx,miny,maxx,maxy]: [151.2084668, -33.806042, 151.230767, -33.794718]
+2025-10-15 18:20:11,455 [INFO] Roads head(5):
+    osm_id  code  fclass                        name  layer bridge tunnel                fname type width population  ref oneway  maxspeed                                                                                                                                                                                                                                                                                                                                                                                                                                      geometry
+1081034612  5154    path                        None    1.0      T      F gis_osm_roads_free_1 None  None       None None      B       0.0                                                                                                                                                                                                                                                                                                                                                                                         LINESTRING (151.22193 -33.80488, 151.22195 -33.80488)
+ 868422498  5155   steps                        None    0.0      F      F gis_osm_roads_free_1 None  None       None None      B       0.0                                                                                                                                                                                                                                                                                                                                                                                         LINESTRING (151.22117 -33.80514, 151.22118 -33.80517)
+ 821720812  5154    path                        None    0.0      F      F gis_osm_roads_free_1 None  None       None None      B       0.0                     LINESTRING (151.21766 -33.80537, 151.21793 -33.80534, 151.21803 -33.80532, 151.21816 -33.80532, 151.21827 -33.80531, 151.21871 -33.80539, 151.21878 -33.80543, 151.21897 -33.80545, 151.21942 -33.80555, 151.21992 -33.80546, 151.22008 -33.80548, 151.22019 -33.80553, 151.22046 -33.80545, 151.22058 -33.80534, 151.22117 -33.80514, 151.2212 -33.80507, 151.22138 -33.80503, 151.22166 -33.80489, 151.22193 -33.80488)
+ 507890155  5141 service                        None    0.0      F      F gis_osm_roads_free_1 None  None       None None      B       0.0 LINESTRING (151.21155 -33.79623, 151.21155 -33.79613, 151.21152 -33.79602, 151.21149 -33.79595, 151.21142 -33.79589, 151.21133 -33.79583, 151.21123 -33.79579, 151.21113 -33.79573, 151.21103 -33.79567, 151.21097 -33.79562, 151.21096 -33.79558, 151.21097 -33.79556, 151.21102 -33.79555, 151.21107 -33.79556, 151.2113 -33.79562, 151.21151 -33.79571, 151.21163 -33.79577, 151.21172 -33.79587, 151.21183 -33.79602, 151.2119 -33.79615)
+1081035341  5154    path Harold Reid Foreshore Track    0.0      F      F gis_osm_roads_free_1 None  None       None None      B       0.0                                                                                                                                                     LINESTRING (151.21201 -33.79623, 151.2121 -33.79615, 151.21209 -33.79607, 151.21206 -33.79599, 151.21201 -33.79595, 151.21192 -33.79585, 151.2119 -33.79571, 151.21187 -33.79566, 151.21182 -33.79564, 151.21176 -33.79552, 151.21177 -33.79549, 151.2117 -33.79545, 151.21172 -33.79536)
+2025-10-15 18:20:11,458 [INFO] Do datasets overlap spatially? True
+2025-10-15 18:20:11,469 [INFO] Using 6728 nearby GNAF properties within roads bbox.
+2025-10-15 18:20:11,469 [INFO] Computing nearest-road orientation (metric EPSG: 7856)
+2025-10-15 18:20:31,046 [INFO] Wrote 6728 rows to gnaf_orientation.csv
+2025-10-15 18:20:31,047 [INFO] Results head(5):
+               address orientation  bearing_deg  distance_to_road_m note
+      7 CHARLES STREET           N          6.7               14.52   ok
+        22 THE PARAPET          SE        155.5               16.52   ok
+        24 THE PARAPET           S        177.5               20.84   ok
+        27 THE PARAPET          SW        220.3               28.35   ok
+109 EASTERN VALLEY WAY           E         70.0               58.34   ok
+2025-10-15 18:20:31,050 [INFO] Validation: loading results CSV: gnaf_orientation.csv
+2025-10-15 18:20:31,157 [INFO] Validating 6728 rows (of 6728). Unmatched/out-of-bounds kept as missing where applicable.
+2025-10-15 18:20:51,200 [INFO] Wrote validation CSV: gnaf_orientation_validated.csv
+2025-10-15 18:20:51,200 [INFO] Overall orientation match: 6728/6728 = 100.0%
+2025-10-15 18:20:51,201 [INFO] QC verdict counts:
+qc_verdict
+ok    6728
+2025-10-15 18:20:51,203 [INFO] No orientation mismatches found in sample view.
+2025-10-15 18:20:51,208 [INFO] === Pipeline finished successfully ===
