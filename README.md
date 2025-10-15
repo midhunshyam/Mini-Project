@@ -64,9 +64,12 @@ Clone to this repository and follow the below instructions:
 If you like, you can run the script from a terminal:
 
 ```bash
+
 cd <path/to/Mini-Project/Scripts>
 cp <path/to/gnaf_prop.parquet> <path/to/Mini-Project/Scripts>
 cp <path/to/roads.gpkg> <path/to/Mini-Project/Scripts>
+
+pip install pandas geopandas pyarrow shapely tqdm
 
 python Microburbs_MiniProject.py \
   --gnaf gnaf_prop.parquet \
